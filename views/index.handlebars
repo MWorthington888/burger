@@ -29,14 +29,13 @@
 	<div class="row">
 		<div class="middle-section">
 			<div class="col-md-5">
-
-				{{!-- <h2>Burgers To DEVOUR!</h2> --}}
-
 				<div id="devour">
 
 					{{#each burgers}}
 						{{#if devoured}}
+							<ul>
 							{{> burgers/burger-block devoured=false}} {{/if}}
+							</ul>
 					{{/each}}
 				</div>
 			</div>
@@ -51,9 +50,9 @@
 
 					{{#each burgers}}
 						{{#unless devoured}}
-							<li>
+							<ul>
 								{{id}}. {{burger_name}}
-							</li>
+							</ul>
 						{{/unless}}
 					{{/each}}
 
@@ -73,13 +72,14 @@
 	<div class="row">
 		<div class="lower-section">
 			<div class="center col-sm-12">
-				<h2>Add a Burger</h2>
+				<h2>Add a Burger here</h2>
 				<form class="create-form">
 
 					<div class="field">
-						<label class="label" id="label" for="burger">Burger Name:</label>
+						<label class="label" id="label" for="burger">
 						<input type="text" id="burger" name="name" class="input" required>
-						<button class="button is-danger" type="submit ">Enter</button>
+						<button class="button btn-primary" type="submit ">Enter</button>
+						</label>
 					</div>
 				</form>
 				<br><br>
