@@ -1,0 +1,58 @@
+*{
+  box-sizing: border-box;
+}
+  .container {
+    width: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    /* text-align: center; */
+  }
+
+body {
+  background-image: url('../../assets/image/tiki2.jpg');
+  background-position: center;
+  background-size: cover;
+  font-family: 'Luckiest Guy', cursive;
+
+ 
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 22px;
+  line-height: 150%;
+  color: #333;
+  
+}
+  .jumbotron {
+
+ 
+  background-image: url('../../assets/image/tiki7.jpg');
+  
+  background-position: left top;
+  background-repeat: repeat;
+
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-size: 1460px 1168px; */
+  color: red;
+    text-shadow: 5px 3px 5px black;
+  
+} 
+
+.top-section, .lower-section{
+  text-align: center; 
+}
+#label {
+  color: black;
+  font-size: 16px;
+}
+#burger-photo{
+  margin-top: 10px;
+}
+body {
+  /* font-family: 'Muli', sans-serif; */
+  font-family: 'Luckiest Guy', cursive;
+}
+li {
+  padding: 4px;
+  font-size: 26px;
+}

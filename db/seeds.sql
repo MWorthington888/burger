@@ -4,7 +4,7 @@ INSERT INTO burgers(burger_name)
 VALUES('BabyMetal-Japanese');
 
 INSERT INTO burgers(burger_name)
-VALUES('Keegan Michael Key-Lime Sliders');
+VALUES('Keegan Michael Sliders');
 
 INSERT INTO burgers(burger_name)
 VALUES('Tofu-Yuck-Alicious');

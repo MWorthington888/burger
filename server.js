@@ -1,25 +1,32 @@
-// Dependencies ===============================================
-require("dotenv").config();
-const express = require("express");
-const bodyParser = require("body-parser");
+var express = require("express");
+var bodyParser = require("body-parser");
+
+const PORT = process.env.PORT || 3000;
+
+var app = express();
+
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json !!!!!!!!!!!!!!!!!!!!!! delete maybe
+app.use(bodyParser.json());
+
+// Set Handlebars.
 const exphbs = require("express-handlebars");
 
-const methodOverride = require('method-override');
-
-const routes = require("./controllers/burgers_controller");
-const app = express();
-const PORT = process.env.PORT || 8080;
-
-// Config Settings ==============================================
-app.use(methodOverride('_method'));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine","handlebars");
-app.use("/", routes);
-app.use(express.static('public'));
+app.set("view engine", "handlebars");
 
-// Listener ========================================================
-app.listen(PORT,function(){
-    console.log("App now listening at localhost:" + PORT);
+// Import routes and give the server access to them.
+var routes = require("./controllers/burgers_controller");
+
+app.use(routes);
+
+// Start our server so that it can begin listening to client requests.
+app.listen(PORT, function() {
+  // Log (server-side) when our server has started
+  console.log("Server listening on: http://localhost:" + PORT);
 });
