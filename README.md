@@ -28,7 +28,8 @@ All burgers, whether eaten or not, appear and remain in a MySql database.
 
 
 
-This is a screen shot of the survey page:
+This is a 4-minute tutorial on how to work the app:
+https://drive.google.com/file/d/1JsY17FgRJeqP-TW01XE_Jd_fhecGErUx/view
 
 ---------------------------------
 Developers notes:
