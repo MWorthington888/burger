@@ -8,8 +8,7 @@ const burger = require("../models/burger");
 // Create all our routes and set up logic within those routes where required.
 
 
-//***************************************************** */
-// LOADS ALL the burgers FROM the DB to DOM
+// LOADS ALL the burgers FROM the DB to DOM ------------------------------------------------
 router.get("/", (req, res) => {
     burger.all(data => {
         const hbsObject = {
@@ -20,9 +19,7 @@ router.get("/", (req, res) => {
     })
 });
 
-
-//***************************************************** */
-// ADDS a burger to the DB
+// ADDS a burger to the Database -----------------------------------------------------
 router.post("/api/burgers", (req, res) => {
     burger.insert([
         "burger_name", "devoured"
@@ -33,9 +30,7 @@ router.post("/api/burgers", (req, res) => {
     });
 });
 
-
-//***************************************************** */
-//UPDATES 1 burger from list to devoured
+//UPDATES 1 burger from list to devoured list ------------------------------------------
 router.put("/api/burgers/:id", (req, res) => {
     const condition = "id = " + req.params.id;
     console.log("condition", condition);
@@ -51,5 +46,4 @@ router.put("/api/burgers/:id", (req, res) => {
     });
 });
 
-// Export routes for server.js to use.
 module.exports = router;

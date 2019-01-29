@@ -12,16 +12,15 @@ body {
   background-position: center;
   background-size: cover;
   font-family: 'Luckiest Guy', cursive;
-
   text-shadow: 2px 2px 6px white;
 }
 
   .jumbotron {
-  background-image: url('../../assets/image/tiki7.jpg');
-  background-position: left top;
-  background-repeat: repeat;
-  color: red;
-  text-shadow: 5px 3px 5px black;
+    background-image: url('../../assets/image/tiki7.jpg');
+    background-position: left top;
+    background-repeat: repeat;
+    color: red;
+    text-shadow: 5px 3px 5px black;
   } 
 
 .top-section, .lower-section{
@@ -33,10 +32,9 @@ body {
 }
 
 ul {
-  
-  font-size: 26px;
-      list-style-type: none;
-    margin-left: 36px;
-    padding: 50;
+    font-size: 26px;
+  list-style-type: none;
+  margin-left: 36px;
+  padding: 50;
  
 }

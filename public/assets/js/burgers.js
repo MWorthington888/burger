@@ -1,7 +1,5 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
 
-    //ON CLICK: AJAX call the 
     $(".change-devour").on("click", event => {
         var id = $(event.currentTarget).data("id");
         var newDevour = $(event.currentTarget).data("newdevour");

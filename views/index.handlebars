@@ -1,30 +1,27 @@
 
-	  <div class="container">
+<div class="container">
 
         <!-- Jumbotron -->
-        <div class="jumbotron"  >
-            <!-- <div class="jumbotron" style="background-color: purple; color: white"> -->
-                <h1 class="text-center">Tiki-Burger</h1>
-                <h2 class="text-center">Name a burger and then devour it!</h2>
-            </div>
+    <div class="jumbotron">
+            <h1 class="text-center">Tiki-Burger</h1>
+            <h2 class="text-center">Name a burger and then devour it!</h2>
+    </div>
            
 	<div class="row">
 		<div class="top-section">
 			<div id="columnheadings">
-			<div class="col-md-6">
-				<h2>Fat, delicious burger waiting room!<hr></h2>
-			</div>
+				<div class="col-md-6">
+					<h2>Fat, delicious burger waiting room!<hr></h2>
+				</div>
 
-			<div class="col-md-6">
-				<h2>These burgers were eaten!</h2>
-				<hr><br>
-			</div>
+				<div class="col-md-6">
+					<h2>These burgers were eaten!</h2>
+					<hr><br>
+				</div>
 			</div>
 		</div>
 		
 	</div>
-	<!-- end .row -->
-	{{!-- *************************************************************************** --}}
 
 	<div class="row">
 		<div class="middle-section">
@@ -43,10 +40,7 @@
 			<div class="col-md-2"></div>
 
 			<div class="col-md-5">
-
 				<div id="devoured">
-
-					{{!-- <h2>Burgers devoured</h2> --}}
 
 					{{#each burgers}}
 						{{#unless devoured}}
@@ -55,24 +49,17 @@
 							</ul>
 						{{/unless}}
 					{{/each}}
-
 				</div>
 			</div>
 		</div>
 	</div>
 
 
-
-
-
-	{{!-- end row --}}
-	{{!-- ***************************************************************************** --}}
-
-
 	<div class="row">
 		<div class="lower-section">
 			<div class="center col-sm-12">
 				<h2>Add a Burger here</h2>
+			</div>
 				<form class="create-form">
 
 					<div class="field">
@@ -86,6 +73,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- end .row -->
-
 </div>
