@@ -20,7 +20,7 @@ const printQuestionMarks = num => {
 const objToSql = (ob) => {
   var arr = [];
 
-  // loop through the keys and push the key/value as a string int arr
+  // loop through the keys and push the key/value as a string int array
   for (var key in ob) {
     var value = ob[key];
     // check to skip hidden properties
