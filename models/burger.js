@@ -1,4 +1,4 @@
-//Handles the variables for the DB in ORM (ALL, INSERT, UPDATE)
+//Import the ORM to create fucntions ----------------------
 
 const orm = require("../config/orm");
 
@@ -27,5 +27,5 @@ const burger = {
 
 }
 
-// Exports the database functions for the controller (burger_controller.js).
+// Exports the database functions for the controller.
 module.exports = burger;

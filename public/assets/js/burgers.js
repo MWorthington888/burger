@@ -1,3 +1,5 @@
+//Devouring a burger requires a value change to 'devoured' column in MySql
+//Send PUT request to make that change.
 $(function () {
 
     $(".change-devour").on("click", event => {
@@ -18,6 +20,9 @@ $(function () {
                 location.reload();
             })
     });
+
+    // A new burger name created here. Name captured and 'devoured' value set to '1'
+    // via a POST request.
   
     $('.create-form').on('submit', event => {
         event.preventDefault();

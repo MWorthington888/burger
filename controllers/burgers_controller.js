@@ -2,24 +2,23 @@
 
 const express = require("express");
 const router = express.Router();
+
+// Here we import the burger model to use the db funtions ----
 const burger = require("../models/burger");
 
 
-// Create all our routes and set up logic within those routes where required.
-
-
-// LOADS ALL the burgers FROM the DB to DOM ------------------------------------------------
+// Get all burger data from DB named 'burgers' -----------------------------------------------
 router.get("/", (req, res) => {
     burger.all(data => {
         const hbsObject = {
-            burgers: data //burger is the database and data is what is inside the db
+            burgers: data
         };
         console.log(hbsObject);
-        res.render("index", hbsObject); //index is the name of the page and hbsObject is db object
+        res.render("index", hbsObject); 
     })
 });
 
-// ADDS a burger to the Database -----------------------------------------------------
+// ADDS a burger to the DB-----------------------------------------------------
 router.post("/api/burgers", (req, res) => {
     burger.insert([
         "burger_name", "devoured"
@@ -30,7 +29,7 @@ router.post("/api/burgers", (req, res) => {
     });
 });
 
-//UPDATES 1 burger from waiting list to devoured list ------------------------------------------
+//UPDATES a burger from waiting list to devoured list ------------------------------------------
 router.put("/api/burgers/:id", (req, res) => {
     const condition = "id = " + req.params.id;
     console.log("condition", condition);
