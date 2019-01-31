@@ -3,16 +3,16 @@ const mysql = require("mysql");
 
 var connection;
 
-//Links to the Heroku DB add on ------------------------------------
+//Links to the Heroku DB, if not go via localhost------------------------------------
 if (process.env.JAWSDB_URL) {
 	connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
 	connection = mysql.createConnection({
 		port: 3306,
-		host: "axxb6a0z2kydkco3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-		user: "hsjxpgy2htjgonsx",
-		password: "tl8phuejyqc63zd3",
-		database: "dnk8dygqk253a0n8"
+		host: "localhost",
+		user: "Michael Worthington",
+		password: "gracieroot",
+		database: "burgers_db"
 	});
 }
 
